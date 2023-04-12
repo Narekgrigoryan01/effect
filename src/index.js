@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyForm from './App';
+import Component from './comp';
+import FontComponent from './font';
+import ColorComponent from './color';
+import Click from './clik';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ColorComponent/>
+    <MyForm/>
+    <Component/>
+    <FontComponent/>
+    <Click/>
+    {/* <App /> */}
   </React.StrictMode>
 );
 

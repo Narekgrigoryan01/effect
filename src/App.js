@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+const MyForm = () => {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [age, setAge] = useState("")
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <input
+        type="text"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+
+      />
+      <input
+        type="text"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+
+      />
+      <input
+        type="text"
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+
+      />
+      <button >clik me</button>
+      <p>Barev dzez im anunn e  {firstName}, im azganunn e {lastName}, ev es {age} tarekan em</p>
     </div>
   );
-}
+};
 
-export default App;
+export default MyForm;
